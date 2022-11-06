@@ -77,7 +77,7 @@ body {
   min-height: 100vh;
   display: block;
   z-index: 98;
-  background-color: #12002f;
+  background-color: #181818;
   padding-top: 120px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -94,8 +94,9 @@ body {
   margin: 0 auto 16px;
   text-align: center;
   padding: 12px 16px;
-  background-color: #1f103f;
-  color: #fff;
+  background-color: #fdd700;
+  border-radius: 30px;
+  color: #333;
   text-decoration: none;
 }
 
