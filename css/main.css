@@ -90,18 +90,17 @@ body {
 .mobile-nav a {
   display: block;
   width: 100%;
-  max-width: 200px;
   margin: 0 auto 16px;
   text-align: center;
-  padding: 12px 16px;
-  background-color: #fdd700;
-  border-radius: 30px;
-  color: #333;
+  padding: 12px 46px;
+  font-size: 30px;
+  color: #f3f3f3;
+  text-align: left;
   text-decoration: none;
 }
 
 .mobile-nav a:hover {
-  background-color: #ffe959;
+  color: #ffe959;
 }
 
 section h2 {
@@ -122,7 +121,7 @@ section h2 {
   display: inline-block;
   color: #333;
   font-size: 20px;
-  background-color: #ffe959;
+  background-color: #fdd700;
   padding: 12px 16px;
   border-radius: 8px;
   text-decoration: none;
@@ -144,8 +143,8 @@ header {
   z-index: 99;
 }
 header .container {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,12 +179,10 @@ header .container nav a {
 header .container nav a:hover {
   color: #ffe959;
 }
-header.is-scrolling {
-  background-color: #12002f;
-}
-header.is-scrolling .container {
-  padding-top: 16px;
-  padding-bottom: 16px;
+header.scrolling {
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: background-color 0.6s;
+  transition: background-color 0.6s;
 }
 
 main section.banner {
@@ -249,34 +246,86 @@ main section.banner .container h3 {
 }
 
 .about-us {
+  height: auto;
+  color: #333;
   background-color: #fdd700;
-  height: 300px;
 }
 .about-us h3 {
   text-align: center;
   margin-bottom: 32px;
   text-transform: uppercase;
-  color: #333;
   font-size: 36px;
 }
-.about-us span {
-  color: #333;
-  font-size: 30px;
+.about-us .centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.about-us .iframe-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
+.about-us .centered .wrapper {
+  display: grid;
+  padding: 0 20px;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  max-width: 1400px;
 }
-.about-us .iframe-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.about-us .centered .wrapper .card__container {
+  max-width: 500px;
+  padding: 3em 2em;
+  margin: 1em;
+  border-radius: 30px;
+  background-color: #fff;
+}
+.about-us .centered .wrapper .card__container span {
+  display: block;
+  text-align: center;
+  font-size: 5rem;
+}
+.about-us .centered .wrapper .card__container p {
+  font-size: 20px;
+  font-weight: 700;
 }
 
+.portfolio {
+  height: 500px;
+  padding-top: 100px;
+  color: #333;
+  background-color: #fdd700;
+}
+.portfolio h3 {
+  text-align: center;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  font-size: 36px;
+}
+
+@media (min-width: 576px) {
+  .about-us .centered .wrapper {
+    grid-template-columns: 1fr;
+  }
+  .about-us .centered .wrapper .card__container h3 {
+    font-size: 20px;
+  }
+  .about-us .centered .wrapper .card__container p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 576px) {
+  .about-us .centered .wrapper {
+    grid-template-columns: 1fr;
+  }
+  .about-us .centered .wrapper .card__container h3 {
+    font-size: 20px;
+  }
+  .about-us .centered .wrapper .card__container p {
+    font-size: 15px;
+  }
+}
 @media (min-width: 768px) {
   .mobile-nav {
     display: none;
@@ -289,6 +338,15 @@ main section.banner .container h3 {
   }
   main section.banner .container h3 {
     font-size: 2rem;
+  }
+  .about-us .centered .wrapper {
+    grid-template-columns: 1fr;
+  }
+  .about-us .centered .wrapper .card__container h3 {
+    font-size: 20px;
+  }
+  .about-us .centered .wrapper .card__container p {
+    font-size: 15px;
   }
 }
 @media (max-width: 768px) {
@@ -311,5 +369,26 @@ main section.banner .container h3 {
   }
   main section.banner .container h3 {
     font-size: 2.2rem;
+  }
+  .about-us .centered .wrapper {
+    grid-template-columns: 1fr;
+  }
+  .about-us .centered .wrapper .card__container h3 {
+    font-size: 20px;
+  }
+  .about-us .centered .wrapper .card__container p {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .about-us .centered .wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .about-us .centered .wrapper .card__container h3 {
+    font-size: 30px;
+  }
+  .about-us .centered .wrapper .card__container p {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=main.css.map */

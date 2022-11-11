@@ -83,20 +83,22 @@ body {
 .mobile-nav a {
 	display: block;
 	width: 100%;
-	max-width: 200px;
+	// max-width: 200px;
 	margin: 0 auto 16px;
 	text-align: center;
-	padding: 12px 16px;
-	background-color: $main;
+	padding: 12px 46px;
+	font-size: 30px;
+	// background-color: $main;
 
-	border-radius: 30px;
+	// border-radius: 30px;
 
-	color: $dark;
+	color: $white;
+	text-align: left;
 	text-decoration: none;
 }
 
 .mobile-nav a:hover {
-	background-color: $main-light;
+	color: $main-light;
 }
 
 section {
@@ -119,7 +121,7 @@ section {
 	display: inline-block;
 	color: $dark;
 	font-size: 20px;
-	background-color: $main-light;
+	background-color: $main;
 	padding: 12px 16px;
 	border-radius: 8px;
 	text-decoration: none;
@@ -142,8 +144,8 @@ header {
 	// background-color: #12002F;
 
 	.container {
-		padding-top: 32px;
-		padding-bottom: 32px;
+		padding-top: 8px;
+		padding-bottom: 8px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -177,12 +179,9 @@ header {
 		}
 	}
 
-	&.is-scrolling {
-		background-color: #12002f;
-		.container {
-			padding-top: 16px;
-			padding-bottom: 16px;
-		}
+	&.scrolling {
+		background-color: rgba(0, 0, 0, 0.8);
+		transition: background-color 0.6s;
 	}
 }
 
@@ -251,40 +250,115 @@ main {
 		display: block;
 	}
 }
-
 .about-us {
+	height: auto;
+	color: $dark;
 	background-color: $main;
-	height: 300px;
 
 	h3 {
 		text-align: center;
 		margin-bottom: 32px;
 		text-transform: uppercase;
 
-		color: $dark;
 		font-size: 36px;
 	}
+	.centered {
+		display: flex;
+		justify-content: center;
 
-	span {
-		color: $dark;
-		font-size: 30px;
+		.wrapper {
+			display: grid;
+			padding: 0 20px;
+			grid-template-columns: 1fr 1fr;
+			justify-items: center;
+			align-items: stretch;
+			max-width: 1400px;
+
+			.card__container {
+				max-width: 500px;
+				padding: 3em 2em;
+				margin: 1em;
+				border-radius: 30px;
+				background-color: #fff;
+				span {
+					display: block;
+					text-align: center;
+					font-size: 5rem;
+				}
+
+				p {
+					font-size: 20px;
+					font-weight: 700;
+				}
+			}
+		}
 	}
-	.iframe-container {
-		position: relative;
-		width: 100%;
-		padding-bottom: 56.25%;
-		height: 0;
-	}
-	.iframe-container iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+
+	// .iframe-container {
+	// 	position: relative;
+	// 	width: 100%;
+	// 	padding-bottom: 56.25%;
+	// 	height: 0;
+	// }
+	// .iframe-container iframe {
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	height: 100%;
+	// }
+}
+
+.portfolio {
+	height: 500px;
+	padding-top: 100px;
+	color: $dark;
+	background-color: $main;
+
+	h3 {
+		text-align: center;
+		margin-bottom: 32px;
+		text-transform: uppercase;
+
+		font-size: 36px;
 	}
 }
 
+@media (min-width: 576px) {
+	.about-us {
+		.centered {
+			.wrapper {
+				grid-template-columns: 1fr;
+				.card__container {
+					h3 {
+						font-size: 20px;
+					}
+
+					p {
+						font-size: 15px;
+					}
+				}
+			}
+		}
+	}
+}
 @media (max-width: 576px) {
+	.about-us {
+		.centered {
+			.wrapper {
+				grid-template-columns: 1fr;
+				.card__container {
+					h3 {
+						font-size: 20px;
+					}
+
+					p {
+						font-size: 15px;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: 768px) {
@@ -303,6 +377,22 @@ main {
 				}
 				h3 {
 					font-size: 2rem;
+				}
+			}
+		}
+	}
+	.about-us {
+		.centered {
+			.wrapper {
+				grid-template-columns: 1fr;
+				.card__container {
+					h3 {
+						font-size: 20px;
+					}
+
+					p {
+						font-size: 15px;
+					}
 				}
 			}
 		}
@@ -346,6 +436,44 @@ main {
 			}
 		}
 	}
+	.about-us {
+		.centered {
+			.wrapper {
+				grid-template-columns: 1fr;
+				.card__container {
+					h3 {
+						font-size: 20px;
+					}
+
+					p {
+						font-size: 15px;
+					}
+				}
+			}
+		}
+	}
 }
+@media (max-width: 992px) {
+}
+
 @media (max-width: 1200px) {
+}
+@media (min-width: 1200px) {
+	.about-us {
+		.centered {
+			.wrapper {
+				grid-template-columns: 1fr 1fr;
+				gap: 10px;
+				.card__container {
+					h3 {
+						font-size: 30px;
+					}
+
+					p {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
 }
