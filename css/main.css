@@ -53,6 +53,7 @@ body {
   margin: 6px 0px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  border-radius: 18px;
 }
 
 .hamburger.is-active:before {
