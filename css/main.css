@@ -260,6 +260,7 @@ main section.banner .container h3 {
 }
 
 .about-us {
+  width: 100%;
   height: auto;
   color: #333;
   background-color: #fdd700;
@@ -317,7 +318,7 @@ main section.banner .container h3 {
 }
 
 .portfolio {
-  height: 1000px;
+  height: 2000px;
   margin-top: -20px;
   padding-top: 70px;
   color: #f3f3f3;
@@ -330,26 +331,25 @@ main section.banner .container h3 {
   font-size: 36px;
 }
 .portfolio .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 300px;
-  height: 400px;
+  margin: 50px auto;
+  max-width: 1000px;
 }
 .portfolio .wrapper .iframe-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  width: 100%;
+  position: relative;
   padding-bottom: 56.25%;
   height: 0;
+  -webkit-box-shadow: 8px 8px 24px 3px rgb(0, 0, 0);
+          box-shadow: 8px 8px 24px 3px rgb(0, 0, 0);
+  -webkit-transition: -webkit-box-shadow, -webkit-transform 0.4s;
+  transition: -webkit-box-shadow, -webkit-transform 0.4s;
+  transition: box-shadow, transform 0.4s;
+  transition: box-shadow, transform 0.4s, -webkit-box-shadow, -webkit-transform 0.4s;
+}
+.portfolio .wrapper .iframe-container:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-box-shadow: 8px 8px 24px 14px rgb(0, 0, 0);
+          box-shadow: 8px 8px 24px 14px rgb(0, 0, 0);
 }
 .portfolio .wrapper .iframe-container iframe {
   position: absolute;
@@ -364,21 +364,39 @@ main section.banner .container h3 {
     grid-template-columns: 1fr;
   }
   .about-us .centered .wrapper .card__container h3 {
-    font-size: 20px;
+    font-size: 2.2rem;
   }
   .about-us .centered .wrapper .card__container p {
-    font-size: 15px;
+    font-size: 1.7rem;
+  }
+  main section.banner .container h1 {
+    font-size: 3rem;
+  }
+  main section.banner .container h3 {
+    font-size: 3rem;
   }
 }
 @media (max-width: 576px) {
+  main section.banner .container h1 {
+    font-size: 1.5rem;
+  }
+  main section.banner .container h3 {
+    font-size: 1.2rem;
+  }
   .about-us .centered .wrapper {
     grid-template-columns: 1fr;
   }
   .about-us .centered .wrapper .card__container h3 {
-    font-size: 20px;
+    font-size: 1.7rem;
   }
   .about-us .centered .wrapper .card__container p {
-    font-size: 15px;
+    font-size: 1.1rem;
+  }
+  .portfolio {
+    height: 1000px;
+  }
+  .portfolio .wrapper {
+    max-width: 300px;
   }
 }
 @media (min-width: 768px) {
@@ -389,10 +407,10 @@ main section.banner .container h3 {
     display: none;
   }
   main section.banner .container h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   main section.banner .container h3 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .about-us .centered .wrapper {
     grid-template-columns: 1fr;
@@ -412,7 +430,7 @@ main section.banner .container h3 {
     display: none;
   }
   main section.banner .container h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   main section.banner .container h3 {
     font-size: 1.8rem;
@@ -420,10 +438,10 @@ main section.banner .container h3 {
 }
 @media (min-width: 992px) {
   main section.banner .container h1 {
-    font-size: 3.2rem;
+    font-size: 4.2rem;
   }
   main section.banner .container h3 {
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
   .about-us .centered .wrapper {
     grid-template-columns: 1fr;
@@ -436,6 +454,12 @@ main section.banner .container h3 {
   }
 }
 @media (min-width: 1200px) {
+  main section.banner .container h1 {
+    font-size: 5rem;
+  }
+  main section.banner .container h3 {
+    font-size: 3rem;
+  }
   .about-us .centered .wrapper {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
