@@ -128,6 +128,14 @@ section h2 {
   text-transform: uppercase;
   font-weight: 700;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+.button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 img {
@@ -245,6 +253,12 @@ main section.banner .container h3 {
   display: block;
 }
 
+.inverted {
+  background-color: #181818;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .about-us {
   height: auto;
   color: #333;
@@ -280,6 +294,13 @@ main section.banner .container h3 {
   margin: 1em;
   border-radius: 30px;
   background-color: #fff;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+  -webkit-box-shadow: 10px 10px 41px -7px rgb(66, 68, 90);
+          box-shadow: 10px 10px 41px -7px rgb(66, 68, 90);
+  z-index: 10;
 }
 .about-us .centered .wrapper .card__container span {
   display: block;
@@ -290,12 +311,16 @@ main section.banner .container h3 {
   font-size: 20px;
   font-weight: 700;
 }
+.about-us .centered .wrapper .card__container:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
 
 .portfolio {
-  height: 500px;
+  height: 1000px;
   padding-top: 100px;
-  color: #333;
-  background-color: #fdd700;
+  color: #f3f3f3;
+  background-color: #181818;
 }
 .portfolio h3 {
   text-align: center;
@@ -303,7 +328,14 @@ main section.banner .container h3 {
   text-transform: uppercase;
   font-size: 36px;
 }
-.portfolio .iframe-container {
+.portfolio .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 600px;
+  height: 400px;
+}
+.portfolio .wrapper .iframe-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,12 +345,12 @@ main section.banner .container h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
+  position: absolute;
   width: 100%;
   padding-bottom: 56.25%;
   height: 0;
 }
-.portfolio .iframe-container iframe {
+.portfolio .wrapper .iframe-container iframe {
   position: absolute;
   top: 0;
   left: 0;

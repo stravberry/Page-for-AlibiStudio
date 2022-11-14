@@ -128,6 +128,12 @@ section {
 	text-transform: uppercase;
 	font-weight: 700;
 	cursor: pointer;
+
+	transition: transform 0.4s;
+
+	&:hover {
+		transform: scale(1.1);
+	}
 }
 
 img {
@@ -250,6 +256,11 @@ main {
 		display: block;
 	}
 }
+.inverted {
+	background-color: $darker;
+
+	transform: rotate(180deg);
+}
 .about-us {
 	height: auto;
 	color: $dark;
@@ -280,6 +291,12 @@ main {
 				margin: 1em;
 				border-radius: 30px;
 				background-color: #fff;
+
+				transition: transform 0.4s;
+
+				box-shadow: 10px 10px 41px -7px rgba(66, 68, 90, 1);
+
+				z-index: 10;
 				span {
 					display: block;
 					text-align: center;
@@ -290,16 +307,20 @@ main {
 					font-size: 20px;
 					font-weight: 700;
 				}
+
+				&:hover {
+					transform: scale(1.05);
+				}
 			}
 		}
 	}
 }
 
 .portfolio {
-	height: 500px;
+	height: 1000px;
 	padding-top: 100px;
-	color: $dark;
-	background-color: $main;
+	color: $white;
+	background-color: $darker;
 
 	h3 {
 		text-align: center;
@@ -309,21 +330,29 @@ main {
 		font-size: 36px;
 	}
 
-	.iframe-container {
+	.wrapper {
 		display: flex;
-		align-items: center;
-		justify-content: center;
-		position: relative;
-		width: 100%;
-		padding-bottom: 56.25%;
-		height: 0;
-	}
-	.iframe-container iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+		width: 600px;
+		height: 400px;
+		
+		
+		.iframe-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			width: 100%;
+			padding-bottom: 56.25%;
+			height: 0;
+
+		}
+		.iframe-container iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
 	}
 }
 
