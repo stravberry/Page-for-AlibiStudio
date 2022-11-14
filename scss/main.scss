@@ -364,11 +364,11 @@ main {
 				grid-template-columns: 1fr;
 				.card__container {
 					h3 {
-						font-size: 20px;
+						font-size: 4rem;
 					}
 
 					p {
-						font-size: 15px;
+						font-size: 3.5rem;
 					}
 				}
 			}
@@ -382,11 +382,11 @@ main {
 				grid-template-columns: 1fr;
 				.card__container {
 					h3 {
-						font-size: 20px;
+						font-size: 3.5rem;
 					}
 
 					p {
-						font-size: 15px;
+						font-size: 3rem;
 					}
 				}
 			}
@@ -406,10 +406,10 @@ main {
 		section.banner {
 			.container {
 				h1 {
-					font-size: 3rem;
+					font-size: 4rem;
 				}
 				h3 {
-					font-size: 2rem;
+					font-size: 3rem;
 				}
 			}
 		}
@@ -431,6 +431,16 @@ main {
 		}
 	}
 }
+@media (min-height: 1000px) {
+	main {
+		.banner {
+			.bg-video {
+				display: none;
+			}
+		}
+	}
+}
+
 @media (max-width: 768px) {
 	button {
 		font-size: 18px;
