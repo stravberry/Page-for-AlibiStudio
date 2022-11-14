@@ -210,7 +210,6 @@ main {
 			min-height: 100%;
 			z-index: -10;
 		}
-		
 
 		&:after {
 			content: '';
@@ -243,7 +242,6 @@ main {
 				font-weight: 400;
 				margin-bottom: 32px;
 			}
-
 		}
 	}
 }
@@ -262,14 +260,23 @@ main {
 	background-color: $darker;
 
 	transform: rotate(180deg);
+}
+.button--wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 
 	
 }
+
 .about-us {
 	width: 100%;
 	height: auto;
 	color: $dark;
 	background-color: $main;
+
+	
 
 	h3 {
 		text-align: center;
@@ -278,6 +285,15 @@ main {
 
 		font-size: 36px;
 	}
+	.button--wrapper {
+		padding-bottom: 30px;
+
+		.button {
+			background-color: $darker;
+			color: $white;
+		}
+	}
+
 	.centered {
 		display: flex;
 		justify-content: center;
@@ -322,7 +338,7 @@ main {
 }
 
 .portfolio {
-	height: 2000px;
+	height: 2200px;
 	margin-top: -20px;
 	padding-top: 70px;
 	color: $white;
@@ -360,7 +376,6 @@ main {
 		}
 	}
 }
-
 @media (min-width: 576px) {
 	.about-us {
 		.centered {
@@ -423,7 +438,7 @@ main {
 	.portfolio {
 		height: 1000px;
 		.wrapper {
-			max-width: 300px;
+			max-width: 200px;
 		}
 	}
 }
@@ -488,6 +503,12 @@ main {
 					font-size: 1.8rem;
 				}
 			}
+		}
+	}
+	.portfolio {
+		height: 1500px;
+		.wrapper {
+			max-width: 400px;
 		}
 	}
 }
