@@ -8,7 +8,7 @@ menu_btn.addEventListener('click', function () {
 
 window.onload = function () {
 	window.addEventListener('scroll', function () {
-		if (window.pageYOffset > 100) {
+		if (window.pageYOffset > 300) {
 			document.querySelector('header').classList.add('scrolling')
 		} else {
 			document.querySelector('header').classList.remove('scrolling')
