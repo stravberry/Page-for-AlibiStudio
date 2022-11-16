@@ -25,8 +25,8 @@
 			<nav>
 				<a href="#">Home</a>
 				<a href="#about-us">O nas</a>
-				<a href="#">Portfolio</a>
-				<a href="#">Kontakt</a>
+				<a href="#portfolio">Portfolio</a>
+				<a href="#contact">Kontakt</a>
 			</nav>
 			<button class="hamburger">
 				<div class="bar"></div>
@@ -34,10 +34,10 @@
 		</div>
 	</header>
 	<nav class="mobile-nav">
-		<a href="#">Home</a>
-		<a href="#about-us">O nas</a>
-		<a href="#">Portfolio</a>
-		<a href="#">Kontakt</a>
+		<a class="nav-button" href="#">Home</a>
+		<a class="nav-button" href="#about-us">O nas</a>
+		<a class="nav-button" href="#portfolio">Portfolio</a>
+		<a class="nav-button" href="#contact">Kontakt</a>
 	</nav>
 	<main>
 		<section class="banner">
@@ -149,7 +149,7 @@
 			</svg></div>
 
 
-		<section class="experience">
+		<section id="experience" class="experience">
 			<h3>Dlaczego warto nas wybrać</h3>
 
 		</section>
@@ -163,7 +163,7 @@
 			</svg></div>
 
 
-		<section class="portfolio">
+		<section id="portfolio" class="portfolio">
 			<h3>Portfolio</h3>
 
 			<div class="button--wrapper dark">
@@ -200,22 +200,23 @@
 
 		</section>
 
-		<!-- <section class="contact" id="contact">
-			<div class="container">
-				<h2>Contact</h2>
+		<div class="wave-container darker inverted"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+				<path fill="#ffd700" fill-opacity="1"
+					d="M0,192L60,192C120,192,240,192,360,165.3C480,139,600,85,720,90.7C840,96,960,160,1080,192C1200,224,1320,224,1380,224L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+				</path>
+			</svg></div>
 
-				<form>
-					<div class="form-grid">
-						<input type="text" name="name" id="name" placeholder="Name" class="form-element" />
-						<input type="email" name="email" id="email" placeholder="Email" class="form-element" />
-						<textarea name="message" id="message" placeholder="Messsage" class="form-area"></textarea>
-					</div>
-					<div class="right-align">
-						<input type="submit" value="Send message" class="button" />
-					</div>
-				</form>
-			</div>
-		</section> -->
+
+
+		<section class="contact" id="contact">
+			<h3>Kontakt</h3>
+
+		</section>
+
+		<footer>
+			
+
+		</footer>
 	</main>
 	<script src="./js/main.js"></script>
 </body>

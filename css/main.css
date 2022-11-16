@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Lato", sans-serif;
 }
@@ -80,8 +84,8 @@ body {
   z-index: 98;
   background-color: #181818;
   padding-top: 120px;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .mobile-nav.is-active {
@@ -399,26 +403,44 @@ main section.banner .container h3 {
   height: 100%;
 }
 
+.contact {
+  height: 500px;
+  margin-top: -20px;
+  padding-top: 70px;
+  color: #f3f3f3;
+  background-color: #181818;
+}
+.contact h3 {
+  text-align: center;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  font-size: 36px;
+}
+
+footer {
+  background-color: #181818;
+}
+
 @media (min-width: 576px) {
   .about-us .centered .wrapper {
     grid-template-columns: 1fr;
   }
   .about-us .centered .wrapper .card__container h3 {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
   }
   .about-us .centered .wrapper .card__container p {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
   }
   main section.banner .container h1 {
-    font-size: 3rem;
+    font-size: 2.3rem;
   }
   main section.banner .container h3 {
-    font-size: 3rem;
+    font-size: 1.2rem;
   }
 }
 @media (max-width: 576px) {
   main section.banner .container h1 {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
   }
   main section.banner .container h3 {
     font-size: 1.2rem;
@@ -427,7 +449,7 @@ main section.banner .container h3 {
     grid-template-columns: 1fr;
   }
   .about-us .centered .wrapper .card__container h3 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   .about-us .centered .wrapper .card__container p {
     font-size: 1.1rem;
@@ -436,7 +458,7 @@ main section.banner .container h3 {
     height: 1000px;
   }
   .portfolio .wrapper {
-    max-width: 200px;
+    max-width: 150px;
   }
 }
 @media (min-width: 768px) {
@@ -447,19 +469,25 @@ main section.banner .container h3 {
     display: none;
   }
   main section.banner .container h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   main section.banner .container h3 {
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
   .about-us .centered .wrapper {
     grid-template-columns: 1fr;
   }
   .about-us .centered .wrapper .card__container h3 {
-    font-size: 20px;
+    font-size: 1.6rem;
   }
   .about-us .centered .wrapper .card__container p {
-    font-size: 15px;
+    font-size: 1.3rem;
+  }
+  .portfolio {
+    height: 1500px;
+  }
+  .portfolio .wrapper {
+    max-width: 500px;
   }
 }
 @media (max-width: 768px) {
@@ -473,7 +501,7 @@ main section.banner .container h3 {
     font-size: 3rem;
   }
   main section.banner .container h3 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
   .portfolio {
     height: 1500px;
@@ -493,15 +521,21 @@ main section.banner .container h3 {
     grid-template-columns: 1fr;
   }
   .about-us .centered .wrapper .card__container h3 {
-    font-size: 20px;
+    font-size: 1.8rem;
   }
   .about-us .centered .wrapper .card__container p {
-    font-size: 15px;
+    font-size: 1.5rem;
+  }
+  .portfolio {
+    height: 1700px;
+  }
+  .portfolio .wrapper {
+    max-width: 700px;
   }
 }
 @media (min-width: 1200px) {
   main section.banner .container h1 {
-    font-size: 5rem;
+    font-size: 3.5rem;
   }
   main section.banner .container h3 {
     font-size: 3rem;
@@ -511,9 +545,9 @@ main section.banner .container h3 {
     gap: 10px;
   }
   .about-us .centered .wrapper .card__container h3 {
-    font-size: 30px;
+    font-size: 1.6rem;
   }
   .about-us .centered .wrapper .card__container p {
-    font-size: 20px;
+    font-size: 1.2rem;
   }
 }/*# sourceMappingURL=main.css.map */

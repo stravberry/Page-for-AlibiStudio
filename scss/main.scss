@@ -5,6 +5,10 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Lato', sans-serif;
 }
@@ -74,7 +78,7 @@ body {
 	z-index: 98;
 	background-color: $darker;
 	padding-top: 120px;
-	transition: 0.8s;
+	transition: 0.5s;
 }
 
 .mobile-nav.is-active {
@@ -396,6 +400,26 @@ main {
 		}
 	}
 }
+.contact {
+	height: 500px;
+	margin-top: -20px;
+	padding-top: 70px;
+	color: $white;
+	background-color: $darker;
+
+	h3 {
+		text-align: center;
+		margin-bottom: 32px;
+		text-transform: uppercase;
+
+		font-size: 36px;
+	}
+}
+
+footer {
+	background-color: $darker;
+}
+
 @media (min-width: 576px) {
 	.about-us {
 		.centered {
@@ -403,11 +427,11 @@ main {
 				grid-template-columns: 1fr;
 				.card__container {
 					h3 {
-						font-size: 2.2rem;
+						font-size: 1.6rem;
 					}
 
 					p {
-						font-size: 1.7rem;
+						font-size: 1.3rem;
 					}
 				}
 			}
@@ -417,21 +441,22 @@ main {
 		section.banner {
 			.container {
 				h1 {
-					font-size: 3rem;
+					font-size: 2.3rem;
 				}
 				h3 {
-					font-size: 3rem;
+					font-size: 1.2rem;
 				}
 			}
 		}
 	}
+
 }
 @media (max-width: 576px) {
 	main {
 		section.banner {
 			.container {
 				h1 {
-					font-size: 1.5rem;
+					font-size: 2.3rem;
 				}
 				h3 {
 					font-size: 1.2rem;
@@ -445,7 +470,7 @@ main {
 				grid-template-columns: 1fr;
 				.card__container {
 					h3 {
-						font-size: 1.7rem;
+						font-size: 1.5rem;
 					}
 
 					p {
@@ -458,7 +483,7 @@ main {
 	.portfolio {
 		height: 1000px;
 		.wrapper {
-			max-width: 200px;
+			max-width: 150px;
 		}
 	}
 }
@@ -475,10 +500,10 @@ main {
 		section.banner {
 			.container {
 				h1 {
-					font-size: 4rem;
+					font-size: 3rem;
 				}
 				h3 {
-					font-size: 3rem;
+					font-size: 2.2rem;
 				}
 			}
 		}
@@ -489,14 +514,20 @@ main {
 				grid-template-columns: 1fr;
 				.card__container {
 					h3 {
-						font-size: 20px;
+						font-size: 1.6rem;
 					}
 
 					p {
-						font-size: 15px;
+						font-size: 1.3rem;
 					}
 				}
 			}
+		}
+	}
+	.portfolio {
+		height: 1500px;
+		.wrapper {
+			max-width: 500px;
 		}
 	}
 }
@@ -520,7 +551,7 @@ main {
 					font-size: 3rem;
 				}
 				h3 {
-					font-size: 1.8rem;
+					font-size: 2.2rem;
 				}
 			}
 		}
@@ -551,14 +582,20 @@ main {
 				grid-template-columns: 1fr;
 				.card__container {
 					h3 {
-						font-size: 20px;
+						font-size: 1.8rem;
 					}
 
 					p {
-						font-size: 15px;
+						font-size: 1.5rem;
 					}
 				}
 			}
+		}
+	}
+	.portfolio {
+		height: 1700px;
+		.wrapper {
+			max-width: 700px;
 		}
 	}
 }
@@ -572,7 +609,7 @@ main {
 		section.banner {
 			.container {
 				h1 {
-					font-size: 5rem;
+					font-size: 3.5rem;
 				}
 				h3 {
 					font-size: 3rem;
@@ -587,11 +624,11 @@ main {
 				gap: 10px;
 				.card__container {
 					h3 {
-						font-size: 30px;
+						font-size: 1.6rem;
 					}
 
 					p {
-						font-size: 20px;
+						font-size: 1.2rem;
 					}
 				}
 			}
