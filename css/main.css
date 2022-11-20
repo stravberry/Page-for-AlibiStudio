@@ -168,13 +168,13 @@ header .container {
       -ms-flex-align: center;
           align-items: center;
 }
-header .container h1 {
+header .container h2 {
   color: inherit;
   text-transform: uppercase;
   font-size: 32px;
   font-weight: 900;
 }
-header .container h1 span {
+header .container h2 span {
   font-weight: 600;
 }
 header .container nav {
