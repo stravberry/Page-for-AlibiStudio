@@ -168,13 +168,13 @@ header .container {
       -ms-flex-align: center;
           align-items: center;
 }
-header .container h2 {
+header .container h1 {
   color: inherit;
   text-transform: uppercase;
   font-size: 32px;
   font-weight: 900;
 }
-header .container h2 span {
+header .container h1 span {
   font-weight: 600;
 }
 header .container nav {
@@ -241,7 +241,7 @@ main section.banner .container h1 {
 main section.banner .container h1 span {
   color: #fdd700;
 }
-main section.banner .container h3 {
+main section.banner .container h2 {
   font-size: 36px;
   font-weight: 400;
   margin-bottom: 32px;
@@ -286,7 +286,7 @@ main section.banner .container h3 {
   color: #333;
   background-color: #fdd700;
 }
-.about-us h3 {
+.about-us h2 {
   text-align: center;
   margin-bottom: 32px;
   text-transform: uppercase;
@@ -352,10 +352,12 @@ main section.banner .container h3 {
   color: #f3f3f3;
   background-color: #181818;
 }
-.experience h3 {
+.experience h2 {
+  padding: 0 20px;
   text-align: center;
   margin-bottom: 32px;
   text-transform: uppercase;
+  color: #f3f3f3;
   font-size: 36px;
 }
 
@@ -370,7 +372,7 @@ main section.banner .container h3 {
   color: #333;
   background-color: #fdd700;
 }
-.portfolio h3 {
+.portfolio h2 {
   text-align: center;
   margin-bottom: 32px;
   text-transform: uppercase;
@@ -410,10 +412,12 @@ main section.banner .container h3 {
   color: #f3f3f3;
   background-color: #181818;
 }
-.contact h3 {
+.contact h2 {
+  padding: 0 20px;
   text-align: center;
   margin-bottom: 32px;
   text-transform: uppercase;
+  color: #f3f3f3;
   font-size: 36px;
 }
 
@@ -425,7 +429,7 @@ footer {
   .about-us .centered .wrapper {
     grid-template-columns: 1fr;
   }
-  .about-us .centered .wrapper .card__container h3 {
+  .about-us .centered .wrapper .card__container h2 {
     font-size: 1.6rem;
   }
   .about-us .centered .wrapper .card__container p {
@@ -434,7 +438,7 @@ footer {
   main section.banner .container h1 {
     font-size: 2.3rem;
   }
-  main section.banner .container h3 {
+  main section.banner .container h2 {
     font-size: 1.2rem;
   }
 }
@@ -442,13 +446,13 @@ footer {
   main section.banner .container h1 {
     font-size: 2.3rem;
   }
-  main section.banner .container h3 {
+  main section.banner .container h2 {
     font-size: 1.2rem;
   }
   .about-us .centered .wrapper {
     grid-template-columns: 1fr;
   }
-  .about-us .centered .wrapper .card__container h3 {
+  .about-us .centered .wrapper .card__container h2 {
     font-size: 1.5rem;
   }
   .about-us .centered .wrapper .card__container p {
@@ -471,13 +475,13 @@ footer {
   main section.banner .container h1 {
     font-size: 3rem;
   }
-  main section.banner .container h3 {
+  main section.banner .container h2 {
     font-size: 2.2rem;
   }
   .about-us .centered .wrapper {
     grid-template-columns: 1fr;
   }
-  .about-us .centered .wrapper .card__container h3 {
+  .about-us .centered .wrapper .card__container h2 {
     font-size: 1.6rem;
   }
   .about-us .centered .wrapper .card__container p {
@@ -500,7 +504,7 @@ footer {
   main section.banner .container h1 {
     font-size: 3rem;
   }
-  main section.banner .container h3 {
+  main section.banner .container h2 {
     font-size: 2.2rem;
   }
   .portfolio {
@@ -514,13 +518,13 @@ footer {
   main section.banner .container h1 {
     font-size: 4.2rem;
   }
-  main section.banner .container h3 {
+  main section.banner .container h2 {
     font-size: 3rem;
   }
   .about-us .centered .wrapper {
     grid-template-columns: 1fr;
   }
-  .about-us .centered .wrapper .card__container h3 {
+  .about-us .centered .wrapper .card__container h2 {
     font-size: 1.8rem;
   }
   .about-us .centered .wrapper .card__container p {
@@ -535,16 +539,16 @@ footer {
 }
 @media (min-width: 1200px) {
   main section.banner .container h1 {
-    font-size: 3.5rem;
+    font-size: 4.3rem;
   }
-  main section.banner .container h3 {
+  main section.banner .container h2 {
     font-size: 3rem;
   }
   .about-us .centered .wrapper {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
-  .about-us .centered .wrapper .card__container h3 {
+  .about-us .centered .wrapper .card__container h2 {
     font-size: 1.6rem;
   }
   .about-us .centered .wrapper .card__container p {
