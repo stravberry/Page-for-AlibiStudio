@@ -156,8 +156,8 @@ header {
   z-index: 99;
 }
 header .container {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -346,9 +346,9 @@ main section.banner .container h2 {
 }
 
 .experience {
-  height: 500px;
   margin-top: -20px;
   padding-top: 70px;
+  padding: 30px;
   color: #f3f3f3;
   background-color: #181818;
 }
@@ -358,7 +358,29 @@ main section.banner .container h2 {
   margin-bottom: 32px;
   text-transform: uppercase;
   color: #f3f3f3;
-  font-size: 36px;
+  font-size: 26px;
+}
+.experience .wrapper .container {
+  width: 100%;
+  position: relative;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+}
+.experience .wrapper .container__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 250px;
+  background-color: red;
 }
 
 .darker {
@@ -406,6 +428,8 @@ main section.banner .container h2 {
 }
 
 .contact {
+  display: grid;
+  place-items: center;
   height: 500px;
   margin-top: -20px;
   padding-top: 70px;
@@ -419,6 +443,26 @@ main section.banner .container h2 {
   text-transform: uppercase;
   color: #f3f3f3;
   font-size: 36px;
+}
+.contact .centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+.contact .centered .container {
+  background-color: #fdd700;
+  border-radius: 18px;
+}
+.contact .centered .container .form_part {
+  padding: 15px 0;
+}
+.contact .centered .container .form_part p {
+  color: #333;
+  padding: 10px 0px;
+}
+.contact .centered .container .form_part input {
+  width: 100%;
 }
 
 footer {
@@ -464,6 +508,12 @@ footer {
   .portfolio .wrapper {
     max-width: 150px;
   }
+  .experience {
+    height: 200vh;
+  }
+  .experience .wrapper .container {
+    grid-template-columns: 1fr;
+  }
 }
 @media (min-width: 768px) {
   .mobile-nav {
@@ -507,6 +557,12 @@ footer {
   main section.banner .container h2 {
     font-size: 2.2rem;
   }
+  .experience {
+    height: 200vh;
+  }
+  .experience .wrapper .container {
+    grid-template-columns: 1fr;
+  }
   .portfolio {
     height: 1500px;
   }
@@ -535,6 +591,14 @@ footer {
   }
   .portfolio .wrapper {
     max-width: 700px;
+  }
+}
+@media (max-width: 992px) {
+  .experience {
+    height: 200vh;
+  }
+  .experience .wrapper .container {
+    grid-template-columns: 1fr;
   }
 }
 @media (min-width: 1200px) {

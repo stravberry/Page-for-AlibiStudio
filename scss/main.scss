@@ -155,8 +155,8 @@ header {
 	// background-color: #12002F;
 
 	.container {
-		padding-top: 8px;
-		padding-bottom: 8px;
+		padding-top: 24px;
+		padding-bottom: 24px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -344,9 +344,9 @@ main {
 	}
 }
 .experience {
-	height: 500px;
 	margin-top: -20px;
 	padding-top: 70px;
+	padding: 30px;
 	color: $white;
 	background-color: $darker;
 	h2 {
@@ -356,7 +356,26 @@ main {
 		margin-bottom: 32px;
 		text-transform: uppercase;
 		color: $white;
-		font-size: 36px;
+		font-size: 26px;
+	}
+	.wrapper {
+		.container {
+			width: 100%;
+			position: relative;
+			padding: 0;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: 0;
+
+			&__block {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height: 250px;
+				background-color: red;
+			}
+		}
 	}
 }
 .darker {
@@ -403,6 +422,8 @@ main {
 	}
 }
 .contact {
+	display: grid;
+	place-items: center;
 	height: 500px;
 	margin-top: -20px;
 	padding-top: 70px;
@@ -415,9 +436,27 @@ main {
 		margin-bottom: 32px;
 		text-transform: uppercase;
 
-
 		color: $white;
 		font-size: 36px;
+	}
+	.centered {
+		display: flex;
+		text-align: left;
+		.container {
+			background-color: $main;
+			border-radius: 18px;
+			.form_part {
+				padding: 15px 0;
+				
+				p {
+					color: $dark;
+					padding: 10px 0px;
+				}
+				input {
+					width: 100%;
+				}
+			}
+		}
 	}
 }
 
@@ -454,7 +493,6 @@ footer {
 			}
 		}
 	}
-
 }
 @media (max-width: 576px) {
 	main {
@@ -489,6 +527,14 @@ footer {
 		height: 1000px;
 		.wrapper {
 			max-width: 150px;
+		}
+	}
+	.experience {
+		height: 200vh;
+		.wrapper {
+			.container {
+				grid-template-columns: 1fr;
+			}
 		}
 	}
 }
@@ -535,6 +581,7 @@ footer {
 			max-width: 500px;
 		}
 	}
+	
 }
 
 @media (max-width: 768px) {
@@ -558,6 +605,14 @@ footer {
 				h2 {
 					font-size: 2.2rem;
 				}
+			}
+		}
+	}
+	.experience {
+		height: 200vh;
+		.wrapper {
+			.container {
+				grid-template-columns: 1fr;
 			}
 		}
 	}
@@ -605,6 +660,14 @@ footer {
 	}
 }
 @media (max-width: 992px) {
+	.experience {
+		height: 200vh;
+		.wrapper {
+			.container {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
 }
 
 @media (max-width: 1200px) {
