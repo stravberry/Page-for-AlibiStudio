@@ -348,7 +348,7 @@ main section.banner .container h2 {
 .experience {
   margin-top: -20px;
   padding-top: 70px;
-  padding: 30px;
+  padding-bottom: 70px;
   color: #f3f3f3;
   background-color: #181818;
 }
@@ -369,6 +369,12 @@ main section.banner .container h2 {
   gap: 0;
 }
 .experience .wrapper .container__block {
+  width: 100%;
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+}
+.experience .wrapper .container__block .shadow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -378,9 +384,29 @@ main section.banner .container h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
   width: 100%;
-  height: 250px;
-  background-color: red;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.experience .wrapper .container .grzegorz {
+  background-image: url(../img/grzegorzv2.jpg);
+}
+.experience .wrapper .container .smart {
+  background-image: url(../img/SMARTGYM.JPG);
+}
+.experience .wrapper .container .marie {
+  background-image: url(../img/Marie.jpeg);
+}
+.experience .wrapper .container .gnt {
+  background-image: url(../img/gotowi.jpg);
+}
+.experience .wrapper .container .candy {
+  background-image: url(../img/cjakcandy.jpg);
+}
+.experience .wrapper .container .covin {
+  background-image: url(../img/covivbig.jpg);
 }
 
 .darker {
@@ -388,7 +414,6 @@ main section.banner .container h2 {
 }
 
 .portfolio {
-  height: 2200px;
   margin-top: -20px;
   padding-top: 70px;
   color: #333;
@@ -413,18 +438,15 @@ main section.banner .container h2 {
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
-.portfolio .wrapper .iframe-container:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
-  -webkit-box-shadow: 8px 8px 24px 14px rgb(0, 0, 0);
-          box-shadow: 8px 8px 24px 14px rgb(0, 0, 0);
-}
 .portfolio .wrapper .iframe-container iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+.portfolio .box {
+  height: 2.5vh;
 }
 
 .contact {
@@ -444,29 +466,31 @@ main section.banner .container h2 {
   color: #f3f3f3;
   font-size: 36px;
 }
-.contact .centered {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: left;
+.contact .wrapper .container {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1fr;
 }
-.contact .centered .container {
-  background-color: #fdd700;
-  border-radius: 18px;
+.contact .wrapper .container p {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
-.contact .centered .container .form_part {
-  padding: 15px 0;
-}
-.contact .centered .container .form_part p {
-  color: #333;
-  padding: 10px 0px;
-}
-.contact .centered .container .form_part input {
-  width: 100%;
+.contact .wrapper .container p span {
+  padding: 0 20px;
 }
 
 footer {
-  background-color: #181818;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-size: 1rem;
+  background-color: #fdd700;
+}
+footer a {
+  text-decoration: none;
+  color: black;
 }
 
 @media (min-width: 576px) {
@@ -502,9 +526,6 @@ footer {
   .about-us .centered .wrapper .card__container p {
     font-size: 1.1rem;
   }
-  .portfolio {
-    height: 1000px;
-  }
   .portfolio .wrapper {
     max-width: 150px;
   }
@@ -537,9 +558,6 @@ footer {
   .about-us .centered .wrapper .card__container p {
     font-size: 1.3rem;
   }
-  .portfolio {
-    height: 1500px;
-  }
   .portfolio .wrapper {
     max-width: 500px;
   }
@@ -563,11 +581,11 @@ footer {
   .experience .wrapper .container {
     grid-template-columns: 1fr;
   }
-  .portfolio {
-    height: 1500px;
-  }
   .portfolio .wrapper {
     max-width: 400px;
+  }
+  .contact .wrapper .container p {
+    font-size: 1.3rem;
   }
 }
 @media (min-width: 992px) {
@@ -585,9 +603,6 @@ footer {
   }
   .about-us .centered .wrapper .card__container p {
     font-size: 1.5rem;
-  }
-  .portfolio {
-    height: 1700px;
   }
   .portfolio .wrapper {
     max-width: 700px;
@@ -617,5 +632,8 @@ footer {
   }
   .about-us .centered .wrapper .card__container p {
     font-size: 1.2rem;
+  }
+  .experience .wrapper .container {
+    max-width: none;
   }
 }/*# sourceMappingURL=main.css.map */

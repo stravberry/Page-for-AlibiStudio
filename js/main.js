@@ -3,6 +3,9 @@ const mobile_menu = document.querySelector('.mobile-nav')
 
 const navButtonCheck = document.querySelector('.mobile-nav')
 
+let date =  new Date().getFullYear();
+document.getElementById("year").innerHTML = date; 
+
 
 
 menu_btn.addEventListener('click', function () {
@@ -26,3 +29,4 @@ window.onload = function () {
 		}
 	})
 }
+

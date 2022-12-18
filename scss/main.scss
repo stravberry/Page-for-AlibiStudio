@@ -346,7 +346,8 @@ main {
 .experience {
 	margin-top: -20px;
 	padding-top: 70px;
-	padding: 30px;
+	padding-bottom: 70px;
+
 	color: $white;
 	background-color: $darker;
 	h2 {
@@ -368,12 +369,41 @@ main {
 			gap: 0;
 
 			&__block {
-				display: flex;
-				align-items: center;
-				justify-content: center;
 				width: 100%;
 				height: 250px;
-				background-color: red;
+
+				background-position: center;
+				background-size: cover;
+				.shadow {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					font-size: 2.5rem;
+					font-weight: bold;
+
+					width: 100%;
+					height: 100%;
+					background-color: rgba(0, 0, 0, 0.5);
+				}
+			}
+			.grzegorz {
+				background-image: url(../img/grzegorzv2.jpg);
+			}
+			.smart {
+				background-image: url(../img/SMARTGYM.JPG);
+			}
+			.marie {
+				background-image: url(../img/Marie.jpeg);
+			}
+			.gnt {
+				background-image: url(../img/gotowi.jpg);
+			}
+			.candy {
+				background-image: url(../img/cjakcandy.jpg);
+			}
+			.covin {
+				background-image: url(../img/covivbig.jpg);
 			}
 		}
 	}
@@ -383,7 +413,7 @@ main {
 }
 
 .portfolio {
-	height: 2200px;
+	// height: 2200px;
 	margin-top: -20px;
 	padding-top: 70px;
 	color: $dark;
@@ -408,10 +438,10 @@ main {
 			box-shadow: 8px 8px 24px 3px rgb(0, 0, 0);
 			transition: 0.6s;
 		}
-		.iframe-container:hover {
-			transform: scale(1.03);
-			box-shadow: 8px 8px 24px 14px rgb(0, 0, 0);
-		}
+		// .iframe-container:hover {
+		// 	transform: scale(1.03);
+		// 	box-shadow: 8px 8px 24px 14px rgb(0, 0, 0);
+		// }
 		.iframe-container iframe {
 			position: absolute;
 			top: 0;
@@ -419,6 +449,9 @@ main {
 			width: 100%;
 			height: 100%;
 		}
+	}
+	.box {
+		height: 2.5vh;
 	}
 }
 .contact {
@@ -439,21 +472,20 @@ main {
 		color: $white;
 		font-size: 36px;
 	}
-	.centered {
-		display: flex;
-		text-align: left;
+	.wrapper {
 		.container {
-			background-color: $main;
-			border-radius: 18px;
-			.form_part {
-				padding: 15px 0;
-				
-				p {
-					color: $dark;
-					padding: 10px 0px;
-				}
-				input {
-					width: 100%;
+			display: grid;
+			place-content: center;
+			grid-template-columns: 1fr;
+
+			p {
+				text-align: center;
+				margin-top: 0;
+				margin-bottom: 1rem;
+				font-size: 2rem;
+
+				span {
+					padding: 0 20px;
 				}
 			}
 		}
@@ -461,7 +493,15 @@ main {
 }
 
 footer {
-	background-color: $darker;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	font-size: 1rem;
+	background-color: $main;
+	a {
+		text-decoration: none;
+		color: black;
+	}
 }
 
 @media (min-width: 576px) {
@@ -524,7 +564,7 @@ footer {
 		}
 	}
 	.portfolio {
-		height: 1000px;
+		// height: 1000px;
 		.wrapper {
 			max-width: 150px;
 		}
@@ -576,12 +616,11 @@ footer {
 		}
 	}
 	.portfolio {
-		height: 1500px;
+		// height: 1500px;
 		.wrapper {
 			max-width: 500px;
 		}
 	}
-	
 }
 
 @media (max-width: 768px) {
@@ -617,9 +656,18 @@ footer {
 		}
 	}
 	.portfolio {
-		height: 1500px;
+		// height: 1500px;
 		.wrapper {
 			max-width: 400px;
+		}
+	}
+	.contact {
+		.wrapper {
+			.container {
+				p {
+					font-size: 1.3rem;
+				}
+			}
 		}
 	}
 }
@@ -653,7 +701,7 @@ footer {
 		}
 	}
 	.portfolio {
-		height: 1700px;
+		// height: 1700px;
 		.wrapper {
 			max-width: 700px;
 		}
@@ -699,6 +747,13 @@ footer {
 						font-size: 1.2rem;
 					}
 				}
+			}
+		}
+	}
+	.experience {
+		.wrapper {
+			.container {
+				max-width: none;
 			}
 		}
 	}
