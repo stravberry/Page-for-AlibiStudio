@@ -363,16 +363,26 @@ main section.banner .container h2 {
 .experience .wrapper .container {
   width: 100%;
   position: relative;
-  padding: 0;
+  padding: 20px;
+  padding-bottom: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 0;
+  gap: 20px;
+  overflow: hidden;
 }
 .experience .wrapper .container__block {
   width: 100%;
   height: 250px;
   background-position: center;
   background-size: cover;
+  border: 0px none #181818;
+  border-radius: 18px;
+  -webkit-box-shadow: 10px 10px 41px -7px rgb(0, 0, 0);
+          box-shadow: 10px 10px 41px -7px rgb(0, 0, 0);
+  -webkit-transition: 0.3s -webkit-transform;
+  transition: 0.3s -webkit-transform;
+  transition: 0.3s transform;
+  transition: 0.3s transform, 0.3s -webkit-transform;
 }
 .experience .wrapper .container__block .shadow {
   display: -webkit-box;
@@ -384,11 +394,27 @@ main section.banner .container h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: 0px none #181818;
+  border-radius: 18px;
+  -webkit-transition: 0.3s background-color;
+  transition: 0.3s background-color;
   font-size: 2.5rem;
   font-weight: bold;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+}
+.experience .wrapper .container__block .shadow a {
+  color: #f3f3f3;
+  text-shadow: 2px 2px 3px #000000;
+  text-decoration: none;
+}
+.experience .wrapper .container__block:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.experience .wrapper .container__block:hover .shadow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .experience .wrapper .container .grzegorz {
   background-image: url(../img/grzegorzv2.jpg);
@@ -576,7 +602,7 @@ footer a {
     font-size: 2.2rem;
   }
   .experience {
-    height: 200vh;
+    height: 230vh;
   }
   .experience .wrapper .container {
     grid-template-columns: 1fr;
@@ -610,7 +636,7 @@ footer a {
 }
 @media (max-width: 992px) {
   .experience {
-    height: 200vh;
+    height: 220vh;
   }
   .experience .wrapper .container {
     grid-template-columns: 1fr;
