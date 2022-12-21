@@ -20,18 +20,6 @@ body {
   padding-left: 128px;
   padding-right: 128px;
 }
-@media (max-width: 1024px) {
-  .container {
-    padding-left: 64px;
-    padding-right: 64px;
-  }
-}
-@media (max-width: 767px) {
-  .container {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
 
 .hamburger {
   position: relative;
@@ -347,8 +335,7 @@ main section.banner .container h2 {
 
 .experience {
   margin-top: -20px;
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding: 20px 70px;
   color: #f3f3f3;
   background-color: #181818;
 }
@@ -361,6 +348,7 @@ main section.banner .container h2 {
   font-size: 26px;
 }
 .experience .wrapper .container {
+  max-width: 1600px;
   width: 100%;
   position: relative;
   padding: 20px;
@@ -368,7 +356,6 @@ main section.banner .container h2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  overflow: hidden;
 }
 .experience .wrapper .container__block {
   width: 100%;
@@ -592,6 +579,10 @@ footer a {
   button {
     font-size: 18px;
   }
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
   header .container nav {
     display: none;
   }
@@ -615,6 +606,10 @@ footer a {
   }
 }
 @media (min-width: 992px) {
+  .container {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
   main section.banner .container h1 {
     font-size: 4.2rem;
   }
