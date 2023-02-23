@@ -328,92 +328,101 @@ main {
 	}
 }
 .experience {
-	margin-top: -20px;
-	padding: 20px 70px;
+	width: 100%;
 
+	height: auto;
+	padding: 20px 20px;
+	display: grid;
+	place-items: center;
 	color: $white;
 	background-color: $darker;
+
 	h2 {
-		padding: 0 20px;
-
-		text-align: center;
-		margin-bottom: 32px;
-		text-transform: uppercase;
 		color: $white;
-		font-size: 26px;
 	}
-
-	.wrapper {
-		.container {
-			max-width: 1600px;
-			width: 100%;
-			position: relative;
-			padding: 20px;
-			padding-bottom: 100px;
+	.grid-layout {
+		width: 100%;
+		max-width: 1600px;
+		display: grid;
+		place-items: center;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+		.container_grid {
+			// min-width: 400px;
 			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
-			gap: 20px;
 
-			&__block {
+			width: 100%;
+			max-width: 500px;
+			height: 200px;
+			background-color: rgba(0, 0, 0, 0.5);
+			place-items: center;
+
+			background-position: center;
+			background-size: cover;
+			border: 0px none #181818;
+			border-radius: 18px;
+			box-shadow: 10px 10px 41px -7px rgb(0, 0, 0);
+			overflow: hidden;
+			font-size: 2.5rem;
+			font-weight: bold;
+
+			transition: 0.3s transform;
+
+			.shadow {
+				display: grid;
+
 				width: 100%;
-				height: 250px;
+				max-width: 500px;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.5);
+				place-items: center;
 
 				background-position: center;
 				background-size: cover;
 				border: 0px none #181818;
 				border-radius: 18px;
 				box-shadow: 10px 10px 41px -7px rgb(0, 0, 0);
+				overflow: hidden;
+				font-size: 2.5rem;
+				font-weight: bold;
 
-				transition: 0.3s transform;
-				.shadow {
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					border: 0px none #181818;
-					border-radius: 18px;
+				transition: 0.3s background-color;
+			}
 
-					transition: 0.3s background-color;
+			a {
+				color: $white;
+				text-shadow: 2px 2px 3px #000000;
+				text-decoration: none;
+				padding: 3rem;
+			}
 
-					font-size: 2.5rem;
-					font-weight: bold;
+			&:hover {
+				transform: scale(1.05);
 
-					width: 100%;
-					height: 100%;
-					background-color: rgba(0, 0, 0, 0.5);
-
-					a {
-						color: $white;
-						text-shadow: 2px 2px 3px #000000;
-						text-decoration: none;
-					}
-				}
-
-				&:hover {
-					transform: scale(1.05);
-
-					.shadow:hover {
-						background-color: rgba(0, 0, 0, 0.8);
-					}
+				.shadow:hover {
+					background-color: rgba(0, 0, 0, 0.8);
 				}
 			}
-			.grzegorz {
-				background-image: url(../img/grzegorzv2.jpg);
-			}
-			.smart {
-				background-image: url(../img/SMARTGYM.JPG);
-			}
-			.marie {
-				background-image: url(../img/Marie.jpeg);
-			}
-			.gnt {
-				background-image: url(../img/gotowi.jpg);
-			}
-			.candy {
-				background-image: url(../img/cjakcandy.jpg);
-			}
-			.covin {
-				background-image: url(../img/covivbig.jpg);
-			}
+		}
+		.grzegorz {
+			background-image: url(../img/grzegorzv2.jpg);
+		}
+		.smart {
+			background-image: url(../img/SMARTGYM.JPG);
+		}
+		.marie {
+			background-image: url(../img/Marie.jpeg);
+		}
+		.gnt {
+			background-image: url(../img/gotowi.jpg);
+		}
+		.candy {
+			background-image: url(../img/cjakcandy.jpg);
+		}
+		.covin {
+			background-image: url(../img/covivbig.jpg);
 		}
 	}
 }
@@ -572,11 +581,12 @@ footer {
 			max-width: 150px;
 		}
 	}
-	.experience {
-		height: 200vh;
+	.contact {
 		.wrapper {
 			.container {
-				grid-template-columns: 1fr;
+				p {
+					font-size: 1rem;
+				}
 			}
 		}
 	}
@@ -653,14 +663,6 @@ footer {
 			}
 		}
 	}
-	.experience {
-		height: 230vh;
-		.wrapper {
-			.container {
-				grid-template-columns: 1fr;
-			}
-		}
-	}
 	.portfolio {
 		.wrapper {
 			max-width: 400px;
@@ -709,6 +711,14 @@ footer {
 			}
 		}
 	}
+	.experience {
+		.grid-layout {
+			.container_grid {
+				min-width: 250px;
+				width: 100%;
+			}
+		}
+	}
 	.portfolio {
 		.wrapper {
 			max-width: 700px;
@@ -717,14 +727,21 @@ footer {
 }
 @media (max-width: 992px) {
 	.experience {
-		height: 220vh;
-		.wrapper {
-			.container {
-				grid-template-columns: 1fr;
+		h2 {
+			font-size: 30px;
+		}
+		.grid-layout {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(6, 1fr);
+
+			.container_grid {
+				// min-width: 200px;
+				width: 100%;
 			}
 		}
 	}
 }
+
 @media (min-width: 1200px) {
 	main {
 		section.banner {
@@ -752,13 +769,6 @@ footer {
 						font-size: 1.2rem;
 					}
 				}
-			}
-		}
-	}
-	.experience {
-		.wrapper {
-			.container {
-				max-width: none;
 			}
 		}
 	}
